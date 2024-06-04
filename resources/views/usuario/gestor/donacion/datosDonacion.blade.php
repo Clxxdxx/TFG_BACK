@@ -146,7 +146,7 @@ button {
             }
 
             function cargarDetalles(idDonacion) {
-                fetch(`http://localhost:8000/api/v1/donaciones/${idDonacion}`)
+                fetch(`http://16.171.16.55/api/v1/donaciones/${idDonacion}`)
                     .then(response => response.json())
                     .then(data => {
                         const {
@@ -193,7 +193,7 @@ button {
             }
 
             function dDonacionesPorDia() {
-                fetch('http://localhost:8000/api/v1/cantidad-donaciones/5')
+                fetch('http://16.171.16.55/api/v1/cantidad-donaciones/29')
                     .then(response => response.json())
                     .then(data => {
                         const fechasDonaciones = data.fechas_donaciones_realizadas;
@@ -240,7 +240,7 @@ button {
                     cargarDetalles(idDonacion);
 
                     // Realizar una solicitud GET a la API para obtener la cantidad de donaciones y las fechas
-                    fetch(`http://localhost:8000/api/v1/cantidad-donaciones/${idDonacion}`)
+                    fetch(`http://16.171.16.55/api/v1/cantidad-donaciones/${idDonacion}`)
                         .then(response => response.json())
                         .then(data => {
                             // Mostrar la cantidad de donaciones en la consola

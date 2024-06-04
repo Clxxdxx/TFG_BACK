@@ -333,7 +333,7 @@ function editarDonacion() {
         fecha_limite: fechaLimite
     };
 
-    fetch(`http://localhost:8000/api/v1/modificar-donacion/${idDonacion}`, {
+    fetch(`http://16.171.16.55/api/v1/modificar-donacion/${idDonacion}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
@@ -364,7 +364,7 @@ function getParameterByName(name, url) {
 }
 
 function cargarDetalles(idDonacion) {
-    fetch(`http://localhost:8000/api/v1/donaciones/${idDonacion}`)
+    fetch(`http://16.171.16.55/api/v1/donaciones/${idDonacion}`)
         .then(response => response.json())
         .then(data => {
             const { titulo, objetivo, fecha_limite, descripcion, imagen } = data.result;

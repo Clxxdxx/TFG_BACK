@@ -333,7 +333,7 @@ function crearDonacion() {
     formData.append('fecha_limite', fechaLimite);
     formData.append('imagen', imagen); 
 
-    fetch('http://localhost:8000/api/v1/crear-donacion', {
+    fetch('http://16.171.16.55/api/v1/crear-donacion', {
         method: 'POST',
         body: formData
     })

@@ -196,11 +196,11 @@ function cargarDonaciones() {
     let url;
 
     if (opcionSeleccionada === 'todo') {
-        url = 'http://localhost:8000/api/v1/donaciones';
+        url = 'http://16.171.16.55/api/v1/donaciones';
     } else if (opcionSeleccionada === 'completado') {
-        url = 'http://localhost:8000/api/v1/donacionesCompletado';
+        url = 'http://16.171.16.55/api/v1/donacionesCompletado';
     } else if (opcionSeleccionada === 'noCompletado') {
-        url = 'http://localhost:8000/api/v1/donacionesNoCompletado';
+        url = 'http://16.171.16.55/api/v1/donacionesNoCompletado';
     }
 
     
@@ -239,7 +239,7 @@ function cargarDonaciones() {
 
 function eliminarDonacion(idDonacion) {
     // Obtener el título de la donación
-    fetch(`http://localhost:8000/api/v1/donaciones/${idDonacion}`)
+    fetch(`http://16.171.16.55/api/v1/donaciones/${idDonacion}`)
         .then(response => response.json())
         .then(data => {
             console.log(data);
@@ -256,7 +256,7 @@ function eliminarDonacion(idDonacion) {
     // Al hacer clic en el botón "Eliminar" en el modal de confirmación
     $('#btnSi').click(function() {
         // Realizar la eliminación si se confirma
-        fetch(`http://localhost:8000/api/v1/eliminar-donacion/${idDonacion}`, {
+        fetch(`http://16.171.16.55/api/v1/eliminar-donacion/${idDonacion}`, {
                 method: 'DELETE',
             })
             .then(response => {
